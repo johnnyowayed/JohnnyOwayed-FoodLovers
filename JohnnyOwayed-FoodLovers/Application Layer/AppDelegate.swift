@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         GADMobileAds.sharedInstance().start(completionHandler: nil)
+        let adRemovalPurchased = UserDefaults.standard
+        adRemovalPurchased.set(false, forKey: "adRemoved")
+        adRemovalPurchased.synchronize()
         
         return true
     }

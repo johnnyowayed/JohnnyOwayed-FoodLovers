@@ -59,7 +59,9 @@
                     </view>
                     <connections>
                         <outlet property="bannerView" destination="pKP-Yy-gtI" id="fvI-Wx-MZD"/>
+                        <outlet property="bannerViewHeight" destination="XrS-nf-v63" id="Bh6-CZ-qdw"/>
                         <outlet property="imageView_Header" destination="gA1-Ce-NVn" id="48k-OD-g8J"/>
+                        <outlet property="removeAdButton" destination="eYa-tg-F9P" id="pR3-Ku-E6u"/>
                         <outlet property="tableView" destination="NBO-0Q-60f" id="uBi-3H-P0o"/>
                     </connections>
                 </viewController>

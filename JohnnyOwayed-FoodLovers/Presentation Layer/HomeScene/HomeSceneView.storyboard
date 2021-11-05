@@ -92,6 +92,7 @@
                     <navigationItem key="navigationItem" id="Csk-Wm-i6M"/>
                     <connections>
                         <outlet property="bannerView" destination="Opx-fN-Tth" id="kJJ-2L-5fN"/>
+                        <outlet property="bannerViewHeight" destination="8jp-JV-yhF" id="wUj-83-g4A"/>
                         <outlet property="collectionView" destination="6Sd-PG-esY" id="ub7-R5-sje"/>
                         <outlet property="removeAdsButton" destination="szu-8h-1P5" id="XUt-XH-vTn"/>
                     </connections>

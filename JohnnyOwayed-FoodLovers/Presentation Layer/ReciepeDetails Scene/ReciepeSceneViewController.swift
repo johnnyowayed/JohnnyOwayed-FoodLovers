@@ -13,9 +13,11 @@ final class ReciepeSceneViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageView_Header: UIImageView!
     @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet weak var removeAdButton: UIButton!
+    @IBOutlet var bannerViewHeight: NSLayoutConstraint!
     
     var item = ReceipeSceneModel(imageUrl: "",title: "", ingredients: [], steps: [])
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,8 +40,19 @@ final class ReciepeSceneViewController: UIViewController {
         
         self.bannerView.delegate = self
         self.bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-        self.bannerView.rootViewController = self
-        self.bannerView.load(GADRequest())
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        let adRemovalPurchased = UserDefaults.standard
+        if !adRemovalPurchased.bool(forKey: "adRemoved") {
+            bannerView.rootViewController = self
+            bannerView.load(GADRequest())
+            print("There is a banner!")
+        } else {
+            bannerView.isHidden = true
+            bannerViewHeight.constant = 0
+            self.removeAdButton.isHidden = true
+            print("There is no banner")
+        }
     }
     
     func registerCells() {
@@ -49,18 +62,23 @@ final class ReciepeSceneViewController: UIViewController {
     
     @IBAction func removeAdsButtonPressed(_ sender: Any) {
         self.alert(message: "Are you sure you want to pay 2.99$ to remove the ads?") {
-            print()
+            let adRemovalPurchased = UserDefaults.standard
+            adRemovalPurchased.set(true, forKey: "adRemoved")
+            adRemovalPurchased.synchronize()
+            self.bannerView.isHidden = true
+            self.removeAdButton.isHidden = true
+            self.bannerViewHeight.constant = 0
         }
     }
 }
 
 extension ReciepeSceneViewController: GADBannerViewDelegate {
     func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
-      print("bannerViewDidReceiveAd")
+        print("bannerViewDidReceiveAd")
     }
-
+    
     func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
-      print("bannerView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+        print("bannerView:didFailToReceiveAdWithError: \(error.localizedDescription)")
     }
 }
 
