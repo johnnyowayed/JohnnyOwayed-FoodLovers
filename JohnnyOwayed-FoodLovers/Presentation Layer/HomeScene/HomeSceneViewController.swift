@@ -183,17 +183,17 @@ extension HomeSceneViewController: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width:collectionView.frame.size.width, height:40)
+        return CGSize(width:collectionView.frame.size.width, height:70)
     }
     
-    //    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-    //
-    ////        if let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SectionHeader", for: indexPath) as? SectionHeader{
-    ////            sectionHeader.sectionHeaderlabel.text = self.viewModel[indexPath.section].categoryName
-    ////            return sectionHeader
-    ////        }
-    //        return UICollectionReusableView()
-    //    }
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        if let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SectionHeader", for: indexPath) as? SectionHeader{
+            sectionHeader.sectionHeaderlabel.text = self.viewModel[indexPath.section].categoryName
+            return sectionHeader
+        }
+        return UICollectionReusableView()
+    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
@@ -221,7 +221,7 @@ extension HomeSceneViewController {
 }
 
 class SectionHeader: UICollectionReusableView {
-    //    @IBOutlet weak var sectionHeaderlabel: UILabel!
+    @IBOutlet weak var sectionHeaderlabel: UILabel!
 }
 
 
