@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,11 @@
 		5F84F8D927350F380030F869 /* FoodItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84F8D727350F380030F869 /* FoodItemCollectionViewCell.swift */; };
 		5F84F8DA27350F380030F869 /* FoodItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F84F8D827350F380030F869 /* FoodItemCollectionViewCell.xib */; };
 		5F84F8DD273513540030F869 /* HomeSceneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84F8DC273513540030F869 /* HomeSceneModel.swift */; };
+		5F84F8E027352FEE0030F869 /* ReceipeDetailsSceneView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F84F8DF27352FEE0030F869 /* ReceipeDetailsSceneView.storyboard */; };
+		5F84F8E62735301E0030F869 /* ReciepeSceneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84F8E52735301E0030F869 /* ReciepeSceneModel.swift */; };
+		5F84F8E82735302F0030F869 /* ReciepeSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84F8E72735302F0030F869 /* ReciepeSceneViewController.swift */; };
+		5F84F8EE2735342F0030F869 /* StepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84F8EC2735342F0030F869 /* StepsTableViewCell.swift */; };
+		5F84F8EF2735342F0030F869 /* StepsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F84F8ED2735342F0030F869 /* StepsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +48,11 @@
 		5F84F8D727350F380030F869 /* FoodItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F84F8D827350F380030F869 /* FoodItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		5F84F8DC273513540030F869 /* HomeSceneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSceneModel.swift; sourceTree = "<group>"; };
+		5F84F8DF27352FEE0030F869 /* ReceipeDetailsSceneView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReceipeDetailsSceneView.storyboard; sourceTree = "<group>"; };
+		5F84F8E52735301E0030F869 /* ReciepeSceneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciepeSceneModel.swift; sourceTree = "<group>"; };
+		5F84F8E72735302F0030F869 /* ReciepeSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciepeSceneViewController.swift; sourceTree = "<group>"; };
+		5F84F8EC2735342F0030F869 /* StepsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsTableViewCell.swift; sourceTree = "<group>"; };
+		5F84F8ED2735342F0030F869 /* StepsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepsTableViewCell.xib; sourceTree = "<group>"; };
 		745AC1945CE390EF235926F3 /* Pods-JohnnyOwayed-FoodLovers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JohnnyOwayed-FoodLovers.release.xcconfig"; path = "Target Support Files/Pods-JohnnyOwayed-FoodLovers/Pods-JohnnyOwayed-FoodLovers.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,7 +82,6 @@
 				23B55550B8097DC5752CA794 /* Pods-JohnnyOwayed-FoodLovers.debug.xcconfig */,
 				745AC1945CE390EF235926F3 /* Pods-JohnnyOwayed-FoodLovers.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -142,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				5F84F8C2273506BE0030F869 /* HomeScene */,
+				5F84F8DE27352FC40030F869 /* ReciepeDetails Scene */,
 			);
 			path = "Presentation Layer";
 			sourceTree = "<group>";
@@ -174,10 +184,38 @@
 		5F84F8DB27350F410030F869 /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
+				5F84F8EB273533FB0030F869 /* Steps Cell */,
+				5F84F8E9273533E40030F869 /* FoodItem */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		5F84F8DE27352FC40030F869 /* ReciepeDetails Scene */ = {
+			isa = PBXGroup;
+			children = (
+				5F84F8DF27352FEE0030F869 /* ReceipeDetailsSceneView.storyboard */,
+				5F84F8E72735302F0030F869 /* ReciepeSceneViewController.swift */,
+				5F84F8E52735301E0030F869 /* ReciepeSceneModel.swift */,
+			);
+			path = "ReciepeDetails Scene";
+			sourceTree = "<group>";
+		};
+		5F84F8E9273533E40030F869 /* FoodItem */ = {
+			isa = PBXGroup;
+			children = (
 				5F84F8D727350F380030F869 /* FoodItemCollectionViewCell.swift */,
 				5F84F8D827350F380030F869 /* FoodItemCollectionViewCell.xib */,
 			);
-			path = ReusableViews;
+			path = FoodItem;
+			sourceTree = "<group>";
+		};
+		5F84F8EB273533FB0030F869 /* Steps Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5F84F8EC2735342F0030F869 /* StepsTableViewCell.swift */,
+				5F84F8ED2735342F0030F869 /* StepsTableViewCell.xib */,
+			);
+			path = "Steps Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +278,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F84F8BB2735054B0030F869 /* LaunchScreen.storyboard in Resources */,
+				5F84F8EF2735342F0030F869 /* StepsTableViewCell.xib in Resources */,
+				5F84F8E027352FEE0030F869 /* ReceipeDetailsSceneView.storyboard in Resources */,
 				5F84F8DA27350F380030F869 /* FoodItemCollectionViewCell.xib in Resources */,
 				5F84F8C4273506D40030F869 /* HomeSceneView.storyboard in Resources */,
 				5F84F8B82735054B0030F869 /* Assets.xcassets in Resources */,
@@ -295,11 +335,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F84F8EE2735342F0030F869 /* StepsTableViewCell.swift in Sources */,
+				5F84F8E62735301E0030F869 /* ReciepeSceneModel.swift in Sources */,
 				5F84F8CA273507210030F869 /* HomeSceneViewController.swift in Sources */,
 				5F84F8AF273505460030F869 /* AppDelegate.swift in Sources */,
 				5F84F8D4273509670030F869 /* WebService.swift in Sources */,
 				5F84F8C8273507110030F869 /* HomeScenePressenter.swift in Sources */,
 				5F84F8CC2735072E0030F869 /* HomeSceneRouter.swift in Sources */,
+				5F84F8E82735302F0030F869 /* ReciepeSceneViewController.swift in Sources */,
 				5F84F8D627350A800030F869 /* AllFoods.swift in Sources */,
 				5F84F8D927350F380030F869 /* FoodItemCollectionViewCell.swift in Sources */,
 				5F84F8DD273513540030F869 /* HomeSceneModel.swift in Sources */,

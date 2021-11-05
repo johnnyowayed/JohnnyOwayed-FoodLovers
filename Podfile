@@ -6,7 +6,7 @@ target 'JohnnyOwayed-FoodLovers' do
   use_frameworks!
   
   # Pods for JohnnyOwayed-FoodLovers
-#  pod 'Google-Mobile-Ads-SDK'
+  pod 'Google-Mobile-Ads-SDK'
   pod 'Kingfisher'
   
 end

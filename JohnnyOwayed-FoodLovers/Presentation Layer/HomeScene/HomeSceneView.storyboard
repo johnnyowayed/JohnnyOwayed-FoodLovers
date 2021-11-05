@@ -56,7 +56,7 @@
                                     </connections>
                                 </collectionReusableView>
                             </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Opx-fN-Tth">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Opx-fN-Tth" customClass="GADBannerView">
                                 <rect key="frame" x="47" y="812" width="320" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -78,6 +78,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Csk-Wm-i6M"/>
                     <connections>
+                        <outlet property="bannerView" destination="Opx-fN-Tth" id="kJJ-2L-5fN"/>
                         <outlet property="collectionView" destination="6Sd-PG-esY" id="ub7-R5-sje"/>
                     </connections>
                 </viewController>

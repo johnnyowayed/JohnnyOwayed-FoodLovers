@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import Kingfisher
+import GoogleMobileAds
 
 protocol PresenterOutput {
     func presenterOutput(viewModel: [HomeSceneModel.ViewModel.Categories])
@@ -18,6 +19,7 @@ final class HomeSceneViewController: UIViewController, PresenterOutput {
     var router: HomeSceneRouterImplementation?
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var bannerView: GADBannerView!
     
     private var viewModel: [HomeSceneModel.ViewModel.Categories] = []
     
@@ -33,7 +35,6 @@ final class HomeSceneViewController: UIViewController, PresenterOutput {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         collectionView.collectionViewLayout.invalidateLayout()
-        
     }
     
     func setupUI() {
@@ -41,11 +42,28 @@ final class HomeSceneViewController: UIViewController, PresenterOutput {
         
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+        
+        self.bannerView.delegate = self
+        self.bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        self.bannerView.rootViewController = self
+        self.bannerView.load(GADRequest())
     }
     
     func registerCell() {
         self.collectionView.register(UINib(nibName: "FoodItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
         self.collectionView.register(UINib(nibName: "SectionHeader", bundle: nil), forCellWithReuseIdentifier: "Header")
+    }
+}
+
+//MARK: Ads Banner Delegates
+
+extension HomeSceneViewController: GADBannerViewDelegate {
+    func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
+      print("bannerViewDidReceiveAd")
+    }
+
+    func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
+      print("bannerView:didFailToReceiveAdWithError: \(error.localizedDescription)")
     }
 }
 
@@ -110,6 +128,13 @@ extension HomeSceneViewController: UICollectionViewDelegate, UICollectionViewDat
 ////        }
 //        return UICollectionReusableView()
 //    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let item = self.viewModel[indexPath.section].categories[indexPath.row]
+        
+        self.router?.goToReceipeDetails(item: ReceipeSceneModel.init(imageUrl: item.imageUrl, title: item.name, ingredients: item.ingredients, steps: item.steps))
+    }
 }
 
 //MARK: - Clean Swift Setup
@@ -125,6 +150,7 @@ extension HomeSceneViewController {
         interactor.webService = webService
         interactor.presenter = presenter
         presenter.homeSceneViewController = viewController
+        router.navigationController = self.navigationController
     }
 }
 
