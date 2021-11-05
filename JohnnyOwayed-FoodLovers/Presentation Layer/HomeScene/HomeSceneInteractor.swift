@@ -17,9 +17,10 @@ final class HomeSceneInteractorImplementation: HomeSceneInteractor {
     
     func fetchFoods() {
         self.webService?.fetchRecipes(success: { receipes in
-            
+            let response = HomeSceneModel.Response.init(reciepes: receipes)
+            self.presenter?.interactor(foodFetched: response)
         }, failure: { errorMessage in
-            self.presenter
+            print()
         })
     }
 }

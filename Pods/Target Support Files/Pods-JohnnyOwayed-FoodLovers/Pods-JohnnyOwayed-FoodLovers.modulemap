@@ -1,0 +1,6 @@
+framework module Pods_JohnnyOwayed_FoodLovers {
+  umbrella header "Pods-JohnnyOwayed-FoodLovers-umbrella.h"
+
+  export *
+  module * { export * }
+}

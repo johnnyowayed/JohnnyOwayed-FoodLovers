@@ -6,11 +6,13 @@
 //
 
 import Foundation
+import UIKit
 
 protocol HomeSceneRouter {
     
 }
 
 final class HomeSceneRouterImplementation: HomeSceneRouter {
-    
+    weak var viewController: UIViewController?
+    weak var navigationController: UINavigationController?
 }
