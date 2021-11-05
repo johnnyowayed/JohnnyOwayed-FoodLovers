@@ -9,21 +9,37 @@
 /* Begin PBXBuildFile section */
 		5F84F8AF273505460030F869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84F8AE273505460030F869 /* AppDelegate.swift */; };
 		5F84F8B1273505460030F869 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84F8B0273505460030F869 /* SceneDelegate.swift */; };
-		5F84F8B3273505460030F869 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84F8B2273505460030F869 /* ViewController.swift */; };
-		5F84F8B6273505460030F869 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F84F8B4273505460030F869 /* Main.storyboard */; };
 		5F84F8B82735054B0030F869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F84F8B72735054B0030F869 /* Assets.xcassets */; };
 		5F84F8BB2735054B0030F869 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F84F8B92735054B0030F869 /* LaunchScreen.storyboard */; };
+		5F84F8C4273506D40030F869 /* HomeSceneView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F84F8C3273506D40030F869 /* HomeSceneView.storyboard */; };
+		5F84F8C6273506F70030F869 /* HomeSceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84F8C5273506F70030F869 /* HomeSceneInteractor.swift */; };
+		5F84F8C8273507110030F869 /* HomeScenePressenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84F8C7273507110030F869 /* HomeScenePressenter.swift */; };
+		5F84F8CA273507210030F869 /* HomeSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84F8C9273507210030F869 /* HomeSceneViewController.swift */; };
+		5F84F8CC2735072E0030F869 /* HomeSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84F8CB2735072E0030F869 /* HomeSceneRouter.swift */; };
+		5F84F8D4273509670030F869 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84F8D3273509670030F869 /* WebService.swift */; };
+		5F84F8D627350A800030F869 /* AllFoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84F8D527350A800030F869 /* AllFoods.swift */; };
+		5F84F8D927350F380030F869 /* FoodItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84F8D727350F380030F869 /* FoodItemCollectionViewCell.swift */; };
+		5F84F8DA27350F380030F869 /* FoodItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F84F8D827350F380030F869 /* FoodItemCollectionViewCell.xib */; };
+		5F84F8DD273513540030F869 /* HomeSceneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84F8DC273513540030F869 /* HomeSceneModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5F84F8AB273505460030F869 /* JohnnyOwayed-FoodLovers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JohnnyOwayed-FoodLovers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F84F8AE273505460030F869 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F84F8B0273505460030F869 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5F84F8B2273505460030F869 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5F84F8B5273505460030F869 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5F84F8B72735054B0030F869 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F84F8BA2735054B0030F869 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F84F8BC2735054B0030F869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F84F8C3273506D40030F869 /* HomeSceneView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeSceneView.storyboard; sourceTree = "<group>"; };
+		5F84F8C5273506F70030F869 /* HomeSceneInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSceneInteractor.swift; sourceTree = "<group>"; };
+		5F84F8C7273507110030F869 /* HomeScenePressenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScenePressenter.swift; sourceTree = "<group>"; };
+		5F84F8C9273507210030F869 /* HomeSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSceneViewController.swift; sourceTree = "<group>"; };
+		5F84F8CB2735072E0030F869 /* HomeSceneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSceneRouter.swift; sourceTree = "<group>"; };
+		5F84F8D3273509670030F869 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		5F84F8D527350A800030F869 /* AllFoods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllFoods.swift; sourceTree = "<group>"; };
+		5F84F8D727350F380030F869 /* FoodItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		5F84F8D827350F380030F869 /* FoodItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		5F84F8DC273513540030F869 /* HomeSceneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSceneModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +72,87 @@
 		5F84F8AD273505460030F869 /* JohnnyOwayed-FoodLovers */ = {
 			isa = PBXGroup;
 			children = (
+				5F84F8CD273508E10030F869 /* Application Layer */,
+				5F84F8CF273509220030F869 /* Presentation Layer */,
+				5F84F8D0273509370030F869 /* Business Logic */,
+				5F84F8CE273508FF0030F869 /* Supporting Files */,
+			);
+			path = "JohnnyOwayed-FoodLovers";
+			sourceTree = "<group>";
+		};
+		5F84F8C2273506BE0030F869 /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				5F84F8C3273506D40030F869 /* HomeSceneView.storyboard */,
+				5F84F8C5273506F70030F869 /* HomeSceneInteractor.swift */,
+				5F84F8C7273507110030F869 /* HomeScenePressenter.swift */,
+				5F84F8C9273507210030F869 /* HomeSceneViewController.swift */,
+				5F84F8CB2735072E0030F869 /* HomeSceneRouter.swift */,
+				5F84F8DC273513540030F869 /* HomeSceneModel.swift */,
+			);
+			path = HomeScene;
+			sourceTree = "<group>";
+		};
+		5F84F8CD273508E10030F869 /* Application Layer */ = {
+			isa = PBXGroup;
+			children = (
 				5F84F8AE273505460030F869 /* AppDelegate.swift */,
 				5F84F8B0273505460030F869 /* SceneDelegate.swift */,
-				5F84F8B2273505460030F869 /* ViewController.swift */,
-				5F84F8B4273505460030F869 /* Main.storyboard */,
+			);
+			path = "Application Layer";
+			sourceTree = "<group>";
+		};
+		5F84F8CE273508FF0030F869 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				5F84F8B72735054B0030F869 /* Assets.xcassets */,
 				5F84F8B92735054B0030F869 /* LaunchScreen.storyboard */,
 				5F84F8BC2735054B0030F869 /* Info.plist */,
+				5F84F8DB27350F410030F869 /* ReusableViews */,
 			);
-			path = "JohnnyOwayed-FoodLovers";
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5F84F8CF273509220030F869 /* Presentation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				5F84F8C2273506BE0030F869 /* HomeScene */,
+			);
+			path = "Presentation Layer";
+			sourceTree = "<group>";
+		};
+		5F84F8D0273509370030F869 /* Business Logic */ = {
+			isa = PBXGroup;
+			children = (
+				5F84F8D2273509560030F869 /* Models */,
+				5F84F8D1273509500030F869 /* WebService */,
+			);
+			path = "Business Logic";
+			sourceTree = "<group>";
+		};
+		5F84F8D1273509500030F869 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				5F84F8D3273509670030F869 /* WebService.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		5F84F8D2273509560030F869 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5F84F8D527350A800030F869 /* AllFoods.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5F84F8DB27350F410030F869 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				5F84F8D727350F380030F869 /* FoodItemCollectionViewCell.swift */,
+				5F84F8D827350F380030F869 /* FoodItemCollectionViewCell.xib */,
+			);
+			path = ReusableViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +213,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F84F8BB2735054B0030F869 /* LaunchScreen.storyboard in Resources */,
+				5F84F8DA27350F380030F869 /* FoodItemCollectionViewCell.xib in Resources */,
+				5F84F8C4273506D40030F869 /* HomeSceneView.storyboard in Resources */,
 				5F84F8B82735054B0030F869 /* Assets.xcassets in Resources */,
-				5F84F8B6273505460030F869 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +226,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F84F8B3273505460030F869 /* ViewController.swift in Sources */,
+				5F84F8CA273507210030F869 /* HomeSceneViewController.swift in Sources */,
 				5F84F8AF273505460030F869 /* AppDelegate.swift in Sources */,
+				5F84F8D4273509670030F869 /* WebService.swift in Sources */,
+				5F84F8C8273507110030F869 /* HomeScenePressenter.swift in Sources */,
+				5F84F8CC2735072E0030F869 /* HomeSceneRouter.swift in Sources */,
+				5F84F8D627350A800030F869 /* AllFoods.swift in Sources */,
+				5F84F8D927350F380030F869 /* FoodItemCollectionViewCell.swift in Sources */,
+				5F84F8DD273513540030F869 /* HomeSceneModel.swift in Sources */,
+				5F84F8C6273506F70030F869 /* HomeSceneInteractor.swift in Sources */,
 				5F84F8B1273505460030F869 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,14 +242,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5F84F8B4273505460030F869 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5F84F8B5273505460030F869 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5F84F8B92735054B0030F869 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,7 +375,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "JohnnyOwayed-FoodLovers/Info.plist";
+				INFOPLIST_FILE = "JohnnyOwayed-FoodLovers/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,7 +393,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "JohnnyOwayed-FoodLovers/Info.plist";
+				INFOPLIST_FILE = "JohnnyOwayed-FoodLovers/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
