@@ -27,6 +27,9 @@
 		5F84F8E82735302F0030F869 /* ReciepeSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84F8E72735302F0030F869 /* ReciepeSceneViewController.swift */; };
 		5F84F8EE2735342F0030F869 /* StepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84F8EC2735342F0030F869 /* StepsTableViewCell.swift */; };
 		5F84F8EF2735342F0030F869 /* StepsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F84F8ED2735342F0030F869 /* StepsTableViewCell.xib */; };
+		5F84F8F3273543D40030F869 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84F8F1273543D40030F869 /* HeaderTableViewCell.swift */; };
+		5F84F8F4273543D40030F869 /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F84F8F2273543D40030F869 /* HeaderTableViewCell.xib */; };
+		5F84F8F7273547A80030F869 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84F8F6273547A80030F869 /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +56,9 @@
 		5F84F8E72735302F0030F869 /* ReciepeSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciepeSceneViewController.swift; sourceTree = "<group>"; };
 		5F84F8EC2735342F0030F869 /* StepsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsTableViewCell.swift; sourceTree = "<group>"; };
 		5F84F8ED2735342F0030F869 /* StepsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepsTableViewCell.xib; sourceTree = "<group>"; };
+		5F84F8F1273543D40030F869 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		5F84F8F2273543D40030F869 /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
+		5F84F8F6273547A80030F869 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		745AC1945CE390EF235926F3 /* Pods-JohnnyOwayed-FoodLovers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JohnnyOwayed-FoodLovers.release.xcconfig"; path = "Target Support Files/Pods-JohnnyOwayed-FoodLovers/Pods-JohnnyOwayed-FoodLovers.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +148,7 @@
 				5F84F8B72735054B0030F869 /* Assets.xcassets */,
 				5F84F8B92735054B0030F869 /* LaunchScreen.storyboard */,
 				5F84F8BC2735054B0030F869 /* Info.plist */,
+				5F84F8F52735478F0030F869 /* Extensions */,
 				5F84F8DB27350F410030F869 /* ReusableViews */,
 			);
 			path = "Supporting Files";
@@ -184,6 +191,7 @@
 		5F84F8DB27350F410030F869 /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
+				5F84F8F0273543BA0030F869 /* TableViewHeaderCell */,
 				5F84F8EB273533FB0030F869 /* Steps Cell */,
 				5F84F8E9273533E40030F869 /* FoodItem */,
 			);
@@ -216,6 +224,23 @@
 				5F84F8ED2735342F0030F869 /* StepsTableViewCell.xib */,
 			);
 			path = "Steps Cell";
+			sourceTree = "<group>";
+		};
+		5F84F8F0273543BA0030F869 /* TableViewHeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				5F84F8F1273543D40030F869 /* HeaderTableViewCell.swift */,
+				5F84F8F2273543D40030F869 /* HeaderTableViewCell.xib */,
+			);
+			path = TableViewHeaderCell;
+			sourceTree = "<group>";
+		};
+		5F84F8F52735478F0030F869 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5F84F8F6273547A80030F869 /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F84F8BB2735054B0030F869 /* LaunchScreen.storyboard in Resources */,
+				5F84F8F4273543D40030F869 /* HeaderTableViewCell.xib in Resources */,
 				5F84F8EF2735342F0030F869 /* StepsTableViewCell.xib in Resources */,
 				5F84F8E027352FEE0030F869 /* ReceipeDetailsSceneView.storyboard in Resources */,
 				5F84F8DA27350F380030F869 /* FoodItemCollectionViewCell.xib in Resources */,
@@ -342,9 +368,11 @@
 				5F84F8D4273509670030F869 /* WebService.swift in Sources */,
 				5F84F8C8273507110030F869 /* HomeScenePressenter.swift in Sources */,
 				5F84F8CC2735072E0030F869 /* HomeSceneRouter.swift in Sources */,
+				5F84F8F7273547A80030F869 /* UIViewController+Extensions.swift in Sources */,
 				5F84F8E82735302F0030F869 /* ReciepeSceneViewController.swift in Sources */,
 				5F84F8D627350A800030F869 /* AllFoods.swift in Sources */,
 				5F84F8D927350F380030F869 /* FoodItemCollectionViewCell.swift in Sources */,
+				5F84F8F3273543D40030F869 /* HeaderTableViewCell.swift in Sources */,
 				5F84F8DD273513540030F869 /* HomeSceneModel.swift in Sources */,
 				5F84F8C6273506F70030F869 /* HomeSceneInteractor.swift in Sources */,
 				5F84F8B1273505460030F869 /* SceneDelegate.swift in Sources */,

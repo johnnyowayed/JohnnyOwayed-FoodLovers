@@ -56,6 +56,17 @@
                                     </connections>
                                 </collectionReusableView>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szu-8h-1P5">
+                                <rect key="frame" x="344" y="792" width="60" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="9kl-mT-kaf"/>
+                                    <constraint firstAttribute="width" constant="60" id="zql-M8-dwu"/>
+                                </constraints>
+                                <state key="normal" image="RemoveAdsBtn"/>
+                                <connections>
+                                    <action selector="removeAdsButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mQJ-nH-pmP"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Opx-fN-Tth" customClass="GADBannerView">
                                 <rect key="frame" x="47" y="812" width="320" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -68,18 +79,21 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Opx-fN-Tth" firstAttribute="top" secondItem="szu-8h-1P5" secondAttribute="bottom" id="4rU-wX-knt"/>
                             <constraint firstItem="6Sd-PG-esY" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="CT9-TO-HFy"/>
                             <constraint firstItem="Opx-fN-Tth" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="HWA-7k-KC2"/>
                             <constraint firstItem="Opx-fN-Tth" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Ket-cc-opp"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6Sd-PG-esY" secondAttribute="trailing" constant="8" id="h6N-c6-Qy7"/>
                             <constraint firstItem="6Sd-PG-esY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="kO6-oC-UKo"/>
                             <constraint firstItem="Opx-fN-Tth" firstAttribute="top" secondItem="6Sd-PG-esY" secondAttribute="bottom" id="mzB-0A-Wjw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="szu-8h-1P5" secondAttribute="trailing" constant="10" id="tRa-5g-2bg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Csk-Wm-i6M"/>
                     <connections>
                         <outlet property="bannerView" destination="Opx-fN-Tth" id="kJJ-2L-5fN"/>
                         <outlet property="collectionView" destination="6Sd-PG-esY" id="ub7-R5-sje"/>
+                        <outlet property="removeAdsButton" destination="szu-8h-1P5" id="XUt-XH-vTn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -106,6 +120,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="RemoveAdsBtn" width="301" height="81"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -44,6 +44,13 @@ final class ReciepeSceneViewController: UIViewController {
     
     func registerCells() {
         self.tableView.register(UINib(nibName: "StepsTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
+        self.tableView.register(UINib.init(nibName: "HeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "Header")
+    }
+    
+    @IBAction func removeAdsButtonPressed(_ sender: Any) {
+        self.alert(message: "Are you sure you want to pay 2.99$ to remove the ads?") {
+            print()
+        }
     }
 }
 
@@ -64,23 +71,27 @@ extension ReciepeSceneViewController : UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! StepsTableViewCell
+        var mainCell = UITableViewCell()
         
         if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! StepsTableViewCell
             cell.label.text = "Ingredients"
             var customText = ""
             for ingredient in item.ingredients {
                 customText = customText + "\n- \(ingredient)"
             }
             cell.textView.text = customText
+            mainCell = cell
         }else if indexPath.row == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Header") as! HeaderTableViewCell
             cell.label.text = "Directions"
-            cell.textView.text = ""
+            mainCell = cell
         }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! StepsTableViewCell
             cell.label.text = "Step \(indexPath.row-2)"
             cell.textView.text = item.steps[indexPath.row-2]
+            mainCell = cell
         }
-        
-        return cell
+        return mainCell
     }
 }

@@ -20,6 +20,7 @@ final class HomeSceneViewController: UIViewController, PresenterOutput {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet weak var removeAdsButton: UIButton!
     
     private var viewModel: [HomeSceneModel.ViewModel.Categories] = []
     
@@ -47,11 +48,18 @@ final class HomeSceneViewController: UIViewController, PresenterOutput {
         self.bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         self.bannerView.rootViewController = self
         self.bannerView.load(GADRequest())
+        
+        self.removeAdsButton.setImage(UIImage.init(named: "RemoveAdsBtn"), for: .normal)
     }
     
     func registerCell() {
         self.collectionView.register(UINib(nibName: "FoodItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
         self.collectionView.register(UINib(nibName: "SectionHeader", bundle: nil), forCellWithReuseIdentifier: "Header")
+    }
+    @IBAction func removeAdsButtonPressed(_ sender: Any) {
+        self.alert(message: "Are you sure you want to pay 2.99$ to remove the ads?") {
+            print()
+        }
     }
 }
 

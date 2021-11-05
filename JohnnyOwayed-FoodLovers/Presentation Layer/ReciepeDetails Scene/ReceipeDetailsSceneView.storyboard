@@ -24,7 +24,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pKP-Yy-gtI">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pKP-Yy-gtI" customClass="GADBannerView">
                                 <rect key="frame" x="47" y="812" width="320" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -32,6 +32,17 @@
                                     <constraint firstAttribute="height" constant="50" id="XrS-nf-v63"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYa-tg-F9P">
+                                <rect key="frame" x="344" y="792" width="60" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="AVe-aC-ig3"/>
+                                    <constraint firstAttribute="width" constant="60" id="S4s-F7-s5b"/>
+                                </constraints>
+                                <state key="normal" image="RemoveAdsBtn"/>
+                                <connections>
+                                    <action selector="removeAdsButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="uPR-bx-lM5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -39,12 +50,15 @@
                             <constraint firstItem="NBO-0Q-60f" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="3f4-Ie-1iJ"/>
                             <constraint firstItem="pKP-Yy-gtI" firstAttribute="top" secondItem="NBO-0Q-60f" secondAttribute="bottom" id="Ljh-3A-xNP"/>
                             <constraint firstItem="pKP-Yy-gtI" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="bIN-gp-Yzg"/>
+                            <constraint firstItem="pKP-Yy-gtI" firstAttribute="top" secondItem="eYa-tg-F9P" secondAttribute="bottom" id="e41-0d-rpZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="eYa-tg-F9P" secondAttribute="trailing" constant="10" id="eqn-lv-hkB"/>
                             <constraint firstItem="NBO-0Q-60f" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="hgZ-ar-E0P"/>
                             <constraint firstItem="NBO-0Q-60f" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="i5o-1r-FuP"/>
                             <constraint firstItem="pKP-Yy-gtI" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="oYK-gg-vCo"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bannerView" destination="pKP-Yy-gtI" id="fvI-Wx-MZD"/>
                         <outlet property="imageView_Header" destination="gA1-Ce-NVn" id="48k-OD-g8J"/>
                         <outlet property="tableView" destination="NBO-0Q-60f" id="uBi-3H-P0o"/>
                     </connections>
@@ -64,6 +78,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="RemoveAdsBtn" width="301" height="81"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
